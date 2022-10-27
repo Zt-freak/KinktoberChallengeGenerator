@@ -1,10 +1,12 @@
 <script>
-  let count = 0;
-  const increment = () => {
-    count += 1;
-  };
+	function validate() {
+		console.log("I'm the validate() function")
+	}
 </script>
 
-<button on:click={increment}>
-  count is {count}
-</button>
+<form on:submit|preventDefault={validate}>
+	<input>
+	<button type="submit">
+		Please save me
+	</button>
+</form>
